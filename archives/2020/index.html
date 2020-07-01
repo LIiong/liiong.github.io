@@ -22,7 +22,7 @@
     <meta name="description" content="">
     <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://liion.top/archives/2020/index.html">
+<meta property="og:url" content="https://liion.top/archives/2020/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="liion">
@@ -354,6 +354,77 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/07/02/document-0702/" >
+            
+                <span>shell脚本</span>
+        </a>
+        <div class="abstract-content">
+            helloWord1234567#!&#x2F;bin&#x2F;bash echo &#39;helloword&#39;# 注释# 1.#! 选择编译脚本的shell程序 # 2.&#x2F;bin&#x2F;bash (Bourne Again Shell)免费易用的编译shell程序，被广泛使用# 3.echo 向窗口输出文本信息# 4.sh helloword.sh 执行程序
+变量与参数变量
+变量和等号之间不能有空格
+命名只能使用英文字母，数字和下划线，首个字符不能以数字开头，可以包含下划线(_)，不能包含bash关键字
+通过($)获取变量123456789101112# 变量...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/02</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "shell">shell</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/07/01/document-0701/" >
+            
+                <span>服务器项目问题定位—CPU</span>
+        </a>
+        <div class="abstract-content">
+            如何排查服务器上Java项目CPU使用过高呢？分析造成cpu过高的都是频繁的计算、线程的创建、销毁、切换。
+处理思路
+首先要定位进程（进程是操作系统的基本单元）
+从进程中定位到线程（线程是进程资源分配的最小单元）
+使用Javacore定位线程正在干什么
+
+执行步骤1.通过linux系统命名 top -c,查找到线程中cpu消耗最高的进程(pid)。
+2.使用top -Hp pid,获取进程中消耗最高的线程。
+  因为查出来的线程id（tid）是10进制的，而在java的线程dump中线程是16进制的，所以我们转换一下printf “%x” tid。
+3.使用Javacore命令，jsta...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/01</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "java,linux">java,linux</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/07/01/markdown/" >
             
                 <span>Markdown 教程</span>
@@ -531,9 +602,29 @@ Mo...
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 2
+        Total : 4
         </div>
         <!-- search  -->
         
@@ -549,6 +640,16 @@ Mo...
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">07/02</span><a class="archive-post-title" href= "/2020/07/02/document-0702/" >shell脚本</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/01</span><a class="archive-post-title" href= "/2020/07/01/document-0701/" >服务器项目问题定位—CPU</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">07/01</span><a class="archive-post-title" href= "/2020/07/01/markdown/" >Markdown 教程</a>
         </li>
     
@@ -561,6 +662,10 @@ Mo...
   </div>
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
+    
+        <span class="sidebar-tag-name" data-tags="shell"><span class="iconfont-archer">&#xe606;</span>shell</span>
+    
+        <span class="sidebar-tag-name" data-tags="java,linux"><span class="iconfont-archer">&#xe606;</span>java,linux</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
