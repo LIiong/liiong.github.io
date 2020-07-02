@@ -365,6 +365,39 @@ height:50vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/07/02/document-0702-2/" >
+            
+                <span>关于solo服务器配置问题导致内存溢出频繁gc</span>
+        </a>
+        <div class="abstract-content">
+            一、问题引入&emsp;&emsp;最近使用solo编辑博客时，发现特别的卡，并且Linux服务器使用命令也特别不流畅。索性就使用top -c查看了下服务器CPU的使用情况，果然发现solo服务器时高时低，非常频繁，此时并没有使用服务器。那么服务器究竟在干什么呢？&emsp;&emsp;对CPU服务器分析，（分析方式记录在博客：服务器项目问题定位—CPU）发现此时solo服务器正在进行线程是jvm线程。是什么导致jvm频繁使用呢?我首先想到了gc，通过查看gc日志，发现gc日志中存在大量的Full GC，而且特别频发，如图。 
+二、GC日志分析Full GC  
+1.Initial Ma...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/02</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "java">java</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "jvm">jvm</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/07/01/document-0701/" >
             
                 <span>服务器项目问题定位—CPU</span>
@@ -594,11 +627,9 @@ Mo...
             
                 <span class="iconfont-archer qq" title=qq>
                   
-                  <img class="profile-qr" src="/1121013687" />
+                  <img class="profile-qr" src="/assets/qq_img.png" />
                 </span>
             
-        
-    
         
     
 
@@ -640,11 +671,9 @@ Mo...
             
                 <span class="iconfont-archer qq" title=qq>
                   
-                  <img class="profile-qr" src="/1121013687" />
+                  <img class="profile-qr" src="/assets/qq_img.png" />
                 </span>
             
-        
-    
         
     
 
@@ -722,9 +751,22 @@ Mo...
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 5
+        Total : 6
         </div>
         <!-- search  -->
         
@@ -737,6 +779,11 @@ Mo...
     
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/02</span><a class="archive-post-title" href= "/2020/07/02/document-0702-2/" >关于solo服务器配置问题导致内存溢出频繁gc</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -775,6 +822,8 @@ Mo...
         <span class="sidebar-tag-name" data-tags="github"><span class="iconfont-archer">&#xe606;</span>github</span>
     
         <span class="sidebar-tag-name" data-tags="hexo"><span class="iconfont-archer">&#xe606;</span>hexo</span>
+    
+        <span class="sidebar-tag-name" data-tags="jvm"><span class="iconfont-archer">&#xe606;</span>jvm</span>
     
         <span class="sidebar-tag-name" data-tags="shell"><span class="iconfont-archer">&#xe606;</span>shell</span>
     
