@@ -22,7 +22,7 @@
     <meta name="description" content="">
     <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://liion.top/archives/2020/06/index.html">
+<meta property="og:url" content="https://liion.top/categories/%E6%B5%8B%E8%AF%95/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="liion">
@@ -354,67 +354,35 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2020/06/05/document-0702-1/" >
+        <a class="abstract-title" href = "/2020/07/03/document-0703/" >
             
-                <span>基于GitHub + Hexo 的静态博客搭建</span>
+                <span>ab并发测试工具</span>
         </a>
         <div class="abstract-content">
-            GitHub新建repository
-进入GitHub账号，在repository中点击new 新建仓库
-repository name :  [username].github.io username是指你在GitHub账号的名称配置 GitHub pages
-进入新建的仓库，点击setting，滑动到 GitHub Pages 设置
-Custom domain使用自己的域名，可以不配置。hexo
+            命令
+-n 执行的请求个数，默认时执行一个请求
 
+-c 一次产生的请求个数，即并发个数
 
-安装hexo 12npm install -g hexohexo version
-新建文件夹，初始化hexo项目123mkdir hexo hexo initnpm install
-配置...
+-p:模拟post请求，文件格式为gid=2&amp;status=1,配合-T使用
+
+-T:post数据所使用的Content-Type头信息，如果-T ‘application/x-www-form-urlencoded’
+
+模拟get请求
+1ab -n 10 -c 10 http://www.baidu.com/
+模拟post请求在当前目录下创建一个文件post.txt,编辑文件post.txt写入cid=4&amp;status=1相当于post传递cid,status参数.
+123ab -...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/05</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/03</span>
             </div>
             <!-- tags  -->
             
             <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "github">github</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "hexo">hexo</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/06/02/document-0702/" >
-            
-                <span>shell脚本</span>
-        </a>
-        <div class="abstract-content">
-            helloWord1234567#!&#x2F;bin&#x2F;bash echo &#39;helloword&#39;# 注释# 1.#! 选择编译脚本的shell程序 # 2.&#x2F;bin&#x2F;bash (Bourne Again Shell)免费易用的编译shell程序，被广泛使用# 3.echo 向窗口输出文本信息# 4.sh helloword.sh 执行程序
-变量与参数变量
-变量和等号之间不能有空格
-命名只能使用英文字母，数字和下划线，首个字符不能以数字开头，可以包含下划线(_)，不能包含bash关键字
-通过($)获取变量123456789101112# 变量...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/02</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "shell">shell</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "test">test</a>
     
 </div>
             
