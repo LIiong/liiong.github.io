@@ -22,7 +22,7 @@
     <meta name="description" content="">
     <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://liion.top/archives/2020/07/index.html">
+<meta property="og:url" content="https://liion.top/tags/debug/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="liion">
@@ -382,120 +382,6 @@ Arthas可以帮你解决什么问题
         <a class="post-tag" href="javascript:void(0);" data-tags = "java">java</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "debug">debug</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/03/document-0703/" >
-            
-                <span>ab并发测试工具</span>
-        </a>
-        <div class="abstract-content">
-            命令
--n 执行的请求个数，默认时执行一个请求
-
--c 一次产生的请求个数，即并发个数
-
--p:模拟post请求，文件格式为gid=2&amp;status=1,配合-T使用
-
--T:post数据所使用的Content-Type头信息，如果-T ‘application/x-www-form-urlencoded’
-
-模拟get请求
-1ab -n 10 -c 10 http://www.baidu.com/
-模拟post请求在当前目录下创建一个文件post.txt,编辑文件post.txt写入cid=4&amp;status=1相当于post传递cid,status参数.
-123ab -...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/03</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "test">test</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/02/document-0702-2/" >
-            
-                <span>关于solo服务器配置问题导致内存溢出频繁gc</span>
-        </a>
-        <div class="abstract-content">
-            一、问题引入&emsp;&emsp;最近使用solo编辑博客时，发现特别的卡，并且Linux服务器使用命令也特别不流畅。索性就使用top -c查看了下服务器CPU的使用情况，果然发现solo服务器时高时低，非常频繁，此时并没有使用服务器。那么服务器究竟在干什么呢？&emsp;&emsp;对CPU服务器分析，（分析方式记录在博客：服务器项目问题定位—CPU）发现此时solo服务器正在进行线程是jvm线程。是什么导致jvm频繁使用呢?我首先想到了gc，通过查看gc日志，发现gc日志中存在大量的Full GC，而且特别频发，如图。 
-二、GC日志分析Full GC  
-1.Initial Ma...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/02</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "java">java</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "jvm">jvm</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/01/document-0701/" >
-            
-                <span>服务器项目问题定位—CPU</span>
-        </a>
-        <div class="abstract-content">
-            如何排查服务器上Java项目CPU使用过高呢？分析造成cpu过高的都是频繁的计算、线程的创建、销毁、切换。
-处理思路
-首先要定位进程（进程是操作系统的基本单元）
-从进程中定位到线程（线程是进程资源分配的最小单元）
-使用Javacore定位线程正在干什么
-
-执行步骤1.通过linux系统命名 top -c,查找到线程中cpu消耗最高的进程(pid)。
-2.使用top -Hp pid,获取进程中消耗最高的线程。
-  因为查出来的线程id（tid）是10进制的，而在java的线程dump中线程是16进制的，所以我们转换一下printf “%x” tid。
-3.使用Javacore命令，jsta...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/01</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "java">java</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "linux">linux</a>
     
 </div>
             
