@@ -365,6 +365,39 @@ height:50vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/07/26/document-0727/" >
+            
+                <span>Dockerfile方式springboot生成docker镜像</span>
+        </a>
+        <div class="abstract-content">
+            
+在项目pom.xml目录,编写Dockerfile
+1234567891011121314151617181920# 基础镜像FROM openjdk:8-jdk-alpine# 作者信息MAINTAINER "liion"# 添加一个存储空间VOLUME /tmp# 暴露端口EXPOSE 8080# 添加变量，如果使用dockerfile-maven-plugin，则会自动替换这里的变量内容ARG JAR_FILE=target/test-docker.jar# 往容器中添加jar包ADD $&#123;JAR_FILE&#125; test-docker.jar# 启动镜像自动运行...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/26</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "java">java</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "docker">docker</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/07/05/document-0705/" >
             
                 <span>arthas使用</span>
@@ -878,9 +911,22 @@ Mo...
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 8
+        Total : 9
         </div>
         <!-- search  -->
         
@@ -893,6 +939,11 @@ Mo...
     
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/26</span><a class="archive-post-title" href= "/2020/07/26/document-0727/" >Dockerfile方式springboot生成docker镜像</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -951,9 +1002,11 @@ Mo...
     
         <span class="sidebar-tag-name" data-tags="shell"><span class="iconfont-archer">&#xe606;</span>shell</span>
     
-        <span class="sidebar-tag-name" data-tags="test"><span class="iconfont-archer">&#xe606;</span>test</span>
+        <span class="sidebar-tag-name" data-tags="docker"><span class="iconfont-archer">&#xe606;</span>docker</span>
     
         <span class="sidebar-tag-name" data-tags="debug"><span class="iconfont-archer">&#xe606;</span>debug</span>
+    
+        <span class="sidebar-tag-name" data-tags="test"><span class="iconfont-archer">&#xe606;</span>test</span>
     
         <span class="sidebar-tag-name" data-tags="markdown"><span class="iconfont-archer">&#xe606;</span>markdown</span>
     
