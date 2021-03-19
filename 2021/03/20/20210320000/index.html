@@ -20,17 +20,31 @@
     <meta name="keywords" content="blog,博客,liion">
     
     <meta name="description" content="">
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://liion.top/tags/markdown/index.html">
+    <meta name="description" content="安装frp  查看系统架构,根据系统选择frp版本 1uname -a    代理服务器 1234# 下载wget https:&#x2F;&#x2F;github.com&#x2F;fatedier&#x2F;frp&#x2F;releases&#x2F;download&#x2F;v0.36.1&#x2F;frp_0.36.1_linux_amd64.tar.gz # 解压tar -zxvf frp_0.36.1_linux_amd64.tar.gz  树莓派 1234">
+<meta property="og:type" content="article">
+<meta property="og:title" content="树莓派实现远程ssh">
+<meta property="og:url" content="https://liion.top/2021/03/20/20210320000/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="安装frp  查看系统架构,根据系统选择frp版本 1uname -a    代理服务器 1234# 下载wget https:&#x2F;&#x2F;github.com&#x2F;fatedier&#x2F;frp&#x2F;releases&#x2F;download&#x2F;v0.36.1&#x2F;frp_0.36.1_linux_amd64.tar.gz # 解压tar -zxvf frp_0.36.1_linux_amd64.tar.gz  树莓派 1234">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://liion.top/2021/03/20/20210320000/image-20210320001900707.png">
+<meta property="og:image" content="https://liion.top/2021/03/20/20210320000/image-20210320002740422.png">
+<meta property="og:image" content="https://liion.top/2021/03/20/20210320000/image-20210320003045990.png">
+<meta property="og:image" content="https://liion.top/2021/03/20/20210320000/image-20210320002841466.png">
+<meta property="og:image" content="https://liion.top/2021/03/20/20210320000/image-20210320001110692.png">
+<meta property="og:image" content="https://liion.top/2021/03/20/20210320000/image-20210320001021066.png">
+<meta property="og:image" content="https://liion.top/2021/03/20/20210320000/image-20210320002540832.png">
+<meta property="article:published_time" content="2021-03-20T01:57:31.000Z">
+<meta property="article:modified_time" content="2021-03-19T16:42:06.708Z">
 <meta property="article:author" content="liion">
+<meta property="article:tag" content="frp">
+<meta property="article:tag" content="raspberry">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://liion.top/2021/03/20/20210320000/image-20210320001900707.png">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     
-    <title>liion</title>
+    <title>树莓派实现远程ssh · liion</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -220,12 +234,23 @@
 <meta name="generator" content="Hexo 4.2.1"></head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >桃之夭夭，灼灼其华</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">树莓派实现远程ssh</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>桃之夭夭，灼灼其华</a>
 </header>
@@ -237,24 +262,76 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            树莓派实现远程ssh
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "frp">frp</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "raspberry">raspberry</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>Word count: <span class="post-count word-count">165</span>Reading time: <span class="post-count reading-time">1 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2021/03/20</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -355,55 +432,99 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/05/02/markdown/" >
-            
-                <span>Markdown 教程</span>
-        </a>
-        <div class="abstract-content">
-            Guide这是一篇讲解如何正确使用 Markdown 的排版示例，学会这个很有必要，能让你的文章有更佳清晰的排版。
+            <main class="main post-page">
+    <article class="article-entry">
+        <ul>
+<li><p>安装<a href="https://github.com/fatedier/frp/releases" target="_blank" rel="noopener">frp</a></p>
+<ul>
+<li><p>查看系统架构,根据系统选择frp版本</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uname -a</span><br></pre></td></tr></table></figure>
 
-引用文本：Markdown is a text formatting syntax inspired
+<p><img src="/2021/03/20/20210320000/image-20210320001900707.png" alt="image-20210320001900707"></p>
+</li>
+<li><p>代理服务器</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 下载</span></span><br><span class="line">wget https://github.com/fatedier/frp/releases/download/v0.36.1/frp_0.36.1_linux_amd64.tar.gz </span><br><span class="line"><span class="meta">#</span><span class="bash"> 解压</span></span><br><span class="line">tar -zxvf frp_0.36.1_linux_amd64.tar.gz</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>树莓派</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 下载</span></span><br><span class="line">wget  https://github.com/fatedier/frp/releases/download/v0.36.1/frp_v0.36.1_linux_arm.tar.gz</span><br><span class="line"><span class="meta">#</span><span class="bash"> 解压</span></span><br><span class="line">tar -zxvf frp_v0.36.1_linux_arm.tar.gz</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>配置</p>
+<ul>
+<li><p>代理服务器</p>
+<p><img src="/2021/03/20/20210320000/image-20210320002740422.png" alt="image-20210320002740422"></p>
+<p><strong>注意：</strong>如果代理服务器是阿里云需要开启防火墙</p>
+<p><img src="/2021/03/20/20210320000/image-20210320003045990.png" alt="image-20210320003045990"></p>
+</li>
+<li><p>树莓派 配置<strong>server_addr</strong>为代理服务地址</p>
+<p><img src="/2021/03/20/20210320000/image-20210320002841466.png" alt="image-20210320002841466"></p>
+</li>
+</ul>
+</li>
+<li><p>启动</p>
+<ul>
+<li><p>代理服务器</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./frps -c frps.ini &amp;</span><br></pre></td></tr></table></figure>
 
-语法指导普通内容这段内容展示了在内容里面一些小的格式，比如：
+<p><img src="/2021/03/20/20210320000/image-20210320001110692.png" alt="image-20210320001110692"></p>
+</li>
+<li><p>树莓派</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./frpc -c frpc.ini &amp;</span><br></pre></td></tr></table></figure>
 
-加粗 - **加粗**
+<p><img src="/2021/03/20/20210320000/image-20210320001021066.png" alt="image-20210320001021066"></p>
+</li>
+</ul>
+</li>
+<li><p>远程连接</p>
+<p>代理服务器IP 加上树莓派配置的<strong>remote_port</strong></p>
+<p><img src="/2021/03/20/20210320000/image-20210320002540832.png" alt="image-20210320002540832"></p>
+</li>
+</ul>
 
-倾斜 - *倾斜*
-
-删除线 - ~~删除线~~
-
-Code 标记 - Code 标记
-
-超级链接 - [超级链接](http://github.com)
-
-username@gmail.com - [username@gmail.com](mailto:username@gmai...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/02</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "markdown">markdown</a>
-    
-</div>
-            
-        </div>
     </article>
+    <!-- license  -->
+    
+        <div class="license-wrapper">
+            <p>Author：<a href="https://liion.top">liion</a>
+            <p>原文链接：<a href="https://liion.top/2021/03/20/20210320000/">https://liion.top/2021/03/20/20210320000/</a>
+            <p>发表日期：<a href="https://liion.top/2021/03/20/20210320000/">March 20th 2021, 9:57:31 am</a>
+            <p>更新日期：<a href="https://liion.top/2021/03/20/20210320000/">March 20th 2021, 12:42:06 am</a>
+            <p>版权声明：本文采用<a rel="license noopener" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
+        </div>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2021/03/19/202103191351/" title= "vps服务器 搭建VPN">
+                    <div class="prevTitle">vps服务器 搭建VPN</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
+    
+    <!-- gitalk评论 -->
+
+    <!-- utteranc评论 -->
+
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -463,6 +584,24 @@ username@gmail.com - [username@gmail.com](mailto:username@gmai...
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -867,6 +1006,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>
