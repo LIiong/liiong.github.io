@@ -363,6 +363,53 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2021/03/19/202103191351/" >
+            
+                <span>vps服务器 搭建VPN</span>
+        </a>
+        <div class="abstract-content">
+            
+购买vps服务器
+切换系统到网络纯净版
+开启BBR 优化网络(可选)
+
+outline方式
+安装outline server
+
+运行outline server
+
+
+
+运行outline命令
+
+
+1sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/Jigsaw-Code/outline-server/master/src/server_manager/install_scripts/install_server.sh)"
+
+注意：会自动下载docker，下载后需要启动docker在运行该命令
+12# 启动docker...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/03/19</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "VPN">VPN</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2021/03/19/document-2103-2/" >
             
                 <span>MAC烧录树莓派系统</span>
@@ -727,46 +774,6 @@ Arthas可以帮你解决什么问题
         </div>
     </article>
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/01/document-0701/" >
-            
-                <span>服务器项目问题定位—CPU</span>
-        </a>
-        <div class="abstract-content">
-            如何排查服务器上Java项目CPU使用过高呢？分析造成cpu过高的都是频繁的计算、线程的创建、销毁、切换。
-处理思路
-首先要定位进程（进程是操作系统的基本单元）
-从进程中定位到线程（线程是进程资源分配的最小单元）
-使用Javacore定位线程正在干什么
-
-执行步骤1.通过linux系统命名 top -c,查找到线程中cpu消耗最高的进程(pid)。
-2.使用top -Hp pid,获取进程中消耗最高的线程。
-  因为查出来的线程id（tid）是10进制的，而在java的线程dump中线程是16进制的，所以我们转换一下printf “%x” tid。
-3.使用Javacore命令，jsta...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/01</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "java">java</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "linux">linux</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
     <!-- paginator  -->
     
     <nav class="page-nav">
@@ -999,9 +1006,14 @@ Arthas可以帮你解决什么问题
     
     
     
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 14
+        Total : 15
         </div>
         <!-- search  -->
         
@@ -1014,6 +1026,11 @@ Arthas可以帮你解决什么问题
     
     <div class="archive-year"> 2021 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/19</span><a class="archive-post-title" href= "/2021/03/19/202103191351/" >vps服务器 搭建VPN</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1099,6 +1116,8 @@ Arthas可以帮你解决什么问题
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
+        <span class="sidebar-tag-name" data-tags="VPN"><span class="iconfont-archer">&#xe606;</span>VPN</span>
+    
         <span class="sidebar-tag-name" data-tags="java"><span class="iconfont-archer">&#xe606;</span>java</span>
     
         <span class="sidebar-tag-name" data-tags="linux"><span class="iconfont-archer">&#xe606;</span>linux</span>
@@ -1107,19 +1126,19 @@ Arthas可以帮你解决什么问题
     
         <span class="sidebar-tag-name" data-tags="hexo"><span class="iconfont-archer">&#xe606;</span>hexo</span>
     
-        <span class="sidebar-tag-name" data-tags="test"><span class="iconfont-archer">&#xe606;</span>test</span>
+        <span class="sidebar-tag-name" data-tags="shell"><span class="iconfont-archer">&#xe606;</span>shell</span>
     
         <span class="sidebar-tag-name" data-tags="jvm"><span class="iconfont-archer">&#xe606;</span>jvm</span>
     
-        <span class="sidebar-tag-name" data-tags="shell"><span class="iconfont-archer">&#xe606;</span>shell</span>
+        <span class="sidebar-tag-name" data-tags="docker"><span class="iconfont-archer">&#xe606;</span>docker</span>
+    
+        <span class="sidebar-tag-name" data-tags="test"><span class="iconfont-archer">&#xe606;</span>test</span>
+    
+        <span class="sidebar-tag-name" data-tags="并发"><span class="iconfont-archer">&#xe606;</span>并发</span>
     
         <span class="sidebar-tag-name" data-tags="debug"><span class="iconfont-archer">&#xe606;</span>debug</span>
     
-        <span class="sidebar-tag-name" data-tags="docker"><span class="iconfont-archer">&#xe606;</span>docker</span>
-    
         <span class="sidebar-tag-name" data-tags="kubernetes"><span class="iconfont-archer">&#xe606;</span>kubernetes</span>
-    
-        <span class="sidebar-tag-name" data-tags="并发"><span class="iconfont-archer">&#xe606;</span>并发</span>
     
         <span class="sidebar-tag-name" data-tags="iot"><span class="iconfont-archer">&#xe606;</span>iot</span>
     
@@ -1159,6 +1178,8 @@ jsonContent:
 </div>
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
+    
+        <span class="sidebar-category-name" data-categories="服务器"><span class="iconfont-archer">&#xe60a;</span>服务器</span>
     
         <span class="sidebar-category-name" data-categories="后端"><span class="iconfont-archer">&#xe60a;</span>后端</span>
     
