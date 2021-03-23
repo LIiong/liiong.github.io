@@ -22,7 +22,7 @@
     <meta name="description" content="">
     <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://liion.top/categories/%E5%90%8E%E7%AB%AF/index.html">
+<meta property="og:url" content="https://liion.top/tags/go/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="liion">
@@ -363,205 +363,40 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2021/03/02/document-2103-1/" >
+        <a class="abstract-title" href = "/2021/03/23/2021032310/" >
             
-                <span>Thingsboards Gateway 接入 OPC-UA</span>
+                <span>go 基础语法</span>
         </a>
         <div class="abstract-content">
-            ThingsBoard Gateway 连接 Thingsboard修改tb_gateway.yaml配置文件
-12345678thingsboard: //用于连接ThingsBoard平台的配置  host: 127.0.0.1 //thingsboard ip  port: 1883 //thingsboard mqtt 端口  remoteShell: false  remoteConfiguration: false  security:    accessToken: WQjc205EBB9meDI4lOP0 //设备访问令牌  qos: 1
-开启OPC-UA修改tb_gat...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/03/02</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "iot">iot</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "物联网">物联网</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2021/02/25/document-2102-1/" >
-            
-                <span>Thingsboards Gateway 接入 MODBUS</span>
-        </a>
-        <div class="abstract-content">
-            
-Modbus是一种串行通信协议，是Modicon公司（现在的施耐德电气 Schneider Electric）于1979年为使用可编程逻辑控制器（PLC）通信而发表。Modbus已经成为工业领域通信协议的业界标准（De facto），并且现在是工业电子设备之间常用的连接方式。Modbus协议是一个master/slave架构的协议。有一个节点是master节点，其他使用Modbus协议参与通信的节点是slave节点。每一个slave设备都有一个唯一的地址。在串行和MB+网络中，只有被指定为主节点的节点可以启动一个命令（在以太网上，任何一个设备都能发送一个Modbus命令，但是通常也只有...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/02/25</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "iot">iot</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "物联网">物联网</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/26/document-0727/" >
-            
-                <span>Dockerfile方式springboot生成docker镜像</span>
-        </a>
-        <div class="abstract-content">
-            
-在项目pom.xml目录,编写Dockerfile
-1234567891011121314151617181920# 基础镜像FROM openjdk:8-jdk-alpine# 作者信息MAINTAINER "liion"# 添加一个存储空间VOLUME /tmp# 暴露端口EXPOSE 8080# 添加变量，如果使用dockerfile-maven-plugin，则会自动替换这里的变量内容ARG JAR_FILE=target/test-docker.jar# 往容器中添加jar包ADD $&#123;JAR_FILE&#125; test-docker.jar# 启动镜像自动运行...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/26</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "java">java</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "docker">docker</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/05/document-0705/" >
-            
-                <span>arthas使用</span>
-        </a>
-        <div class="abstract-content">
-            
-是Alibaba开源的Java诊断工具github地址：https://github.com/alibaba/arthas中文档地址：https://arthas.gitee.io/
+            变量和类型
+变量
+1234var i int //声明不赋值，默认为0var i int = 1 //声明时赋值var i = 1 //声明时赋值i := 1 //声明时赋值
 
-Arthas可以帮你解决什么问题
-这个类从哪个 jar 包加载的？为什么会报各种类相关的 Exception？
-我改的代码为什么没有执行到？难道是我没 commit？分支搞错了？
-遇到问题无法在线上 debug，难道只能通过加日志再重新发布吗？
-线上遇到某个用户的数据处理有问题，但线上同样无法 debug，线下无法重现！
-是否有一个全局视角来查看系统的运行状况？
-有什么办法可以监控到JVM的实时运行状态...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/05</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "java">java</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "debug">debug</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/02/document-0702-2/" >
-            
-                <span>关于solo服务器配置问题导致内存溢出频繁gc</span>
-        </a>
-        <div class="abstract-content">
-            一、问题引入&emsp;&emsp;最近使用solo编辑博客时，发现特别的卡，并且Linux服务器使用命令也特别不流畅。索性就使用top -c查看了下服务器CPU的使用情况，果然发现solo服务器时高时低，非常频繁，此时并没有使用服务器。那么服务器究竟在干什么呢？&emsp;&emsp;对CPU服务器分析，（分析方式记录在博客：服务器项目问题定位—CPU）发现此时solo服务器正在进行线程是jvm线程。是什么导致jvm频繁使用呢?我首先想到了gc，通过查看gc日志，发现gc日志中存在大量的Full GC，而且特别频发，如图。 
-二、GC日志分析Full GC  
-1.Initial Ma...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/02</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "java">java</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "jvm">jvm</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/01/document-0701/" >
-            
-                <span>服务器项目问题定位—CPU</span>
-        </a>
-        <div class="abstract-content">
-            如何排查服务器上Java项目CPU使用过高呢？分析造成cpu过高的都是频繁的计算、线程的创建、销毁、切换。
-处理思路
-首先要定位进程（进程是操作系统的基本单元）
-从进程中定位到线程（线程是进程资源分配的最小单元）
-使用Javacore定位线程正在干什么
+基本类型
 
-执行步骤1.通过linux系统命名 top -c,查找到线程中cpu消耗最高的进程(pid)。
-2.使用top -Hp pid,获取进程中消耗最高的线程。
-  因为查出来的线程id（tid）是10进制的，而在java的线程dump中线程是16进制的，所以我们转换一下printf “%x” tid。
-3.使用Javacore命令，jsta...
+空值：nil
+
+整型：int(与操作系统有关，32位还是64位)，int8，int16，int32，int64，uint8，uint16… ，默认为0
+
+浮点型：float32，float64
+
+布尔型：bool(ture, false)，默认为false
+
+字节：byte
+
+字符串：string，默认为””
+12345var a int8 = 8var b float32 = 3.2var c by...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/01</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/03/23</span>
             </div>
             <!-- tags  -->
             
             <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "java">java</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "linux">linux</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "go">go</a>
     
 </div>
             

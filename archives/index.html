@@ -363,6 +363,52 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2021/03/23/2021032310/" >
+            
+                <span>go 基础语法</span>
+        </a>
+        <div class="abstract-content">
+            变量和类型
+变量
+1234var i int //声明不赋值，默认为0var i int = 1 //声明时赋值var i = 1 //声明时赋值i := 1 //声明时赋值
+
+基本类型
+
+空值：nil
+
+整型：int(与操作系统有关，32位还是64位)，int8，int16，int32，int64，uint8，uint16… ，默认为0
+
+浮点型：float32，float64
+
+布尔型：bool(ture, false)，默认为false
+
+字节：byte
+
+字符串：string，默认为””
+12345var a int8 = 8var b float32 = 3.2var c by...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/03/23</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "go">go</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2021/03/20/20210320000/" >
             
                 <span>树莓派实现远程ssh</span>
@@ -743,47 +789,6 @@ Arthas可以帮你解决什么问题
         </div>
     </article>
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/03/document-0703/" >
-            
-                <span>ab并发测试工具</span>
-        </a>
-        <div class="abstract-content">
-            命令
--n 执行的请求个数，默认时执行一个请求
-
--c 一次产生的请求个数，即并发个数
-
--p:模拟post请求，文件格式为gid=2&amp;status=1,配合-T使用
-
--T:post数据所使用的Content-Type头信息，如果-T ‘application/x-www-form-urlencoded’
-
-模拟get请求
-1ab -n 10 -c 10 http://www.baidu.com/
-模拟post请求在当前目录下创建一个文件post.txt,编辑文件post.txt写入cid=4&amp;status=1相当于post传递cid,status参数.
-123ab -...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/03</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "test">test</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
     <!-- paginator  -->
     
     <nav class="page-nav">
@@ -1030,9 +1035,26 @@ Arthas可以帮你解决什么问题
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 16
+        Total : 17
         </div>
         <!-- search  -->
         
@@ -1045,6 +1067,11 @@ Arthas可以帮你解决什么问题
     
     <div class="archive-year"> 2021 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/23</span><a class="archive-post-title" href= "/2021/03/23/2021032310/" >go 基础语法</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1146,6 +1173,8 @@ Arthas可以帮你解决什么问题
     
         <span class="sidebar-tag-name" data-tags="raspberry"><span class="iconfont-archer">&#xe606;</span>raspberry</span>
     
+        <span class="sidebar-tag-name" data-tags="go"><span class="iconfont-archer">&#xe606;</span>go</span>
+    
         <span class="sidebar-tag-name" data-tags="java"><span class="iconfont-archer">&#xe606;</span>java</span>
     
         <span class="sidebar-tag-name" data-tags="linux"><span class="iconfont-archer">&#xe606;</span>linux</span>
@@ -1154,23 +1183,23 @@ Arthas可以帮你解决什么问题
     
         <span class="sidebar-tag-name" data-tags="hexo"><span class="iconfont-archer">&#xe606;</span>hexo</span>
     
-        <span class="sidebar-tag-name" data-tags="jvm"><span class="iconfont-archer">&#xe606;</span>jvm</span>
-    
         <span class="sidebar-tag-name" data-tags="shell"><span class="iconfont-archer">&#xe606;</span>shell</span>
     
         <span class="sidebar-tag-name" data-tags="test"><span class="iconfont-archer">&#xe606;</span>test</span>
     
+        <span class="sidebar-tag-name" data-tags="jvm"><span class="iconfont-archer">&#xe606;</span>jvm</span>
+    
         <span class="sidebar-tag-name" data-tags="debug"><span class="iconfont-archer">&#xe606;</span>debug</span>
     
         <span class="sidebar-tag-name" data-tags="docker"><span class="iconfont-archer">&#xe606;</span>docker</span>
-    
-        <span class="sidebar-tag-name" data-tags="kubernetes"><span class="iconfont-archer">&#xe606;</span>kubernetes</span>
     
         <span class="sidebar-tag-name" data-tags="并发"><span class="iconfont-archer">&#xe606;</span>并发</span>
     
         <span class="sidebar-tag-name" data-tags="iot"><span class="iconfont-archer">&#xe606;</span>iot</span>
     
         <span class="sidebar-tag-name" data-tags="物联网"><span class="iconfont-archer">&#xe606;</span>物联网</span>
+    
+        <span class="sidebar-tag-name" data-tags="kubernetes"><span class="iconfont-archer">&#xe606;</span>kubernetes</span>
     
         <span class="sidebar-tag-name" data-tags="markdown"><span class="iconfont-archer">&#xe606;</span>markdown</span>
     
@@ -1210,6 +1239,8 @@ jsonContent:
         <span class="sidebar-category-name" data-categories="服务器"><span class="iconfont-archer">&#xe60a;</span>服务器</span>
     
         <span class="sidebar-category-name" data-categories="树莓派"><span class="iconfont-archer">&#xe60a;</span>树莓派</span>
+    
+        <span class="sidebar-category-name" data-categories="go"><span class="iconfont-archer">&#xe60a;</span>go</span>
     
         <span class="sidebar-category-name" data-categories="后端"><span class="iconfont-archer">&#xe60a;</span>后端</span>
     
